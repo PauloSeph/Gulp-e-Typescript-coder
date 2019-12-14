@@ -23,10 +23,10 @@ require('./gulpTasks/servidor')
 // ou gulp.start
 gulp.task('default', () => {
     if(util.env.production) {
-        // sequence('deps', 'app')
-        gulp.start('deps', 'app')
+        sequence('deps', 'app')
+        // gulp.start('deps', 'app')
     } else {
-        // sequence('deps', 'app', 'servidor')
-        gulp.start('deps', 'app', 'servidor')
+        sequence('deps', 'app', 'servidor')
+        // gulp.start('deps', 'app', 'servidor')
     }
 })
